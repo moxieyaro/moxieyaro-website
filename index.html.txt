@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moxieyaro - Official Website | Nigerian Gospel Artist</title>
+    <meta name="description" content="Official website of Moxieyaro - Nigerian gospel artist. Listen to latest music, watch videos, and stay updated on events.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1E293B;
+            background: #F8FAFC;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: linear-gradient(135deg, #FFD700, #6B46C1);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 800;
+            text-decoration: none;
+            color: white;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 80vh;
+            background: linear-gradient(rgba(75, 0, 130, 0.8), rgba(255, 215, 0, 0.8));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(3rem, 6vw, 5rem);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: white;
+            color: #4B0082;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #4B0082;
+        }
+
+        /* ===== MUSIC SECTION ===== */
+        .music-section {
+            padding: 5rem 0;
+            background: white;
+            text-align: center;
+        }
+
+        .section-title {
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            color: #4B0082;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .music-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .music-card {
+            background: #F8FAFC;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .music-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .music-card h3 {
+            color: #4B0082;
+            margin-bottom: 1rem;
+        }
+
+        .platform-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .platform-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 10px 20px;
+            background: #4B0082;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .platform-btn:hover {
+            background: #FFD700;
+            color: #4B0082;
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about-section {
+            padding: 5rem 0;
+            background: linear-gradient(45deg, #4B0082, #FF6B35);
+            color: white;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .achievements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .achievement {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+        }
+
+        .achievement-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #FFD700;
+            display: block;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact-section {
+            padding: 5rem 0;
+            background: #1E293B;
+            color: white;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            color: #FFD700;
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #FFD700, #6B46C1);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            transform: scale(1.05);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #4B0082;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .platform-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .achievements {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">MOXIEYARO</div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>MOXIEYARO</h1>
+                <p>Nigerian Gospel Artist | Bringing Afro-Soul Worship to the World</p>
+                <div class="hero-buttons">
+                    <a href="#music" class="btn">Listen to Music</a>
+                    <a href="#about" class="btn btn-secondary">Learn My Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section class="music-section" id="music">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest Music</h2>
+                <p>Stream my latest gospel hits on your favorite platforms</p>
+            </div>
+            
+            <div class="music-grid">
+                <div class="music-card">
+                    <h3>Hausa Gospel Vibe 3</h3>
+                    <p>Latest single - Afro-gospel fusion</p>
+                    <div class="platform-buttons">
+                        <a href="https://open.spotify.com" class="platform-btn">
+                            <i class="fab fa-spotify"></i> Spotify
+                        </a>
+                        <a href="https://music.apple.com" class="platform-btn">
+                            <i class="fab fa-apple"></i> Apple Music
+                        </a>
+                    </div>
+                </div>
+
+                <div class="music-card">
+                    <h3>Dem No Be God</h3>
+                    <p>Inspirational gospel anthem</p>
+                    <div class="platform-buttons">
+                        <a href="https://www.youtube.com" class="platform-btn">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                        <a href="https://audiomack.com" class="platform-btn">
+                            <i class="fas fa-music"></i> Audiomack
+                        </a>
+                    </div>
+                </div>
+
+                <div class="music-card">
+                    <h3>Zuchiya (My Heart)</h3>
+                    <p>Worship in Hausa & English</p>
+                    <div class="platform-buttons">
+                        <a href="https://soundcloud.com" class="platform-btn">
+                            <i class="fab fa-soundcloud"></i> SoundCloud
+                        </a>
+                        <a href="https://shazam.com" class="platform-btn">
+                            <i class="fas fa-search"></i> Shazam
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2>About Moxieyaro</h2>
+            <p>Emmanuel George BABALE, known professionally as Moxieyaro, is a Nigerian gospel artist who has been blessing audiences with his unique blend of alternative, soul, and Afro-gospel music since 2017.</p>
+            <p>My mission is to spread the gospel through music that touches hearts and transforms lives, combining traditional African rhythms with contemporary gospel sounds.</p>
+            
+            <div class="achievements">
+                <div class="achievement">
+                    <span class="achievement-number">7+</span>
+                    <div>Years of Ministry</div>
+                </div>
+                <div class="achievement">
+                    <span class="achievement-number">50+</span>
+                    <div>Songs Released</div>
+                </div>
+                <div class="achievement">
+                    <span class="achievement-number">100K+</span>
+                    <div>Streams Worldwide</div>
+                </div>
+                <div class="achievement">
+                    <span class="achievement-number">25+</span>
+                    <div>Countries Reached</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>Connect With Moxieyaro</h2>
+            <p>Follow my journey and stay updated on new music and events</p>
+            
+            <div class="social-links">
+                <a href="https://instagram.com/moxieyaro" class="social-link">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://facebook.com/emmanuel.babale.7" class="social-link">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+                <a href="https://tiktok.com/@moxieyaro" class="social-link">
+                    <i class="fab fa-tiktok"></i> TikTok
+                </a>
+                <a href="https://youtube.com/@moxieyaro" class="social-link">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+            </div>
+            
+            <p><strong>Email:</strong> moxieyaro@gmail.com</p>
+            <p><strong>Location:</strong> Abuja, Nigeria</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Moxieyaro. All rights reserved. | Nigerian Gospel Artist</p>
+        </div>
+    </footer>
+</body>
+</html>
